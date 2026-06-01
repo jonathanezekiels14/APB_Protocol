@@ -1,11 +1,11 @@
-module slave_apb(
+module #(parameter WIDTH=8) slave_apb(
 	input PWRITE,PSEL1,PENABLE,PCLK,PRESETn,
-	input [7:0] paddr,pwdata,
+	input [WIDTH-1:0] paddr,pwdata,
 	output reg PREADY,
-	output reg [7:0] prdata
+	output reg [WIDTH-1:0] prdata
 );
 
-	reg [7:0] memory [0:255];
+	reg [WIDTH-1:0] memory [0:255];
 
 	localparam IDLE = 0, SETUP = 1, ACCESS = 2;
 	reg [1:0] curr_state, next_state;

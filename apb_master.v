@@ -1,10 +1,10 @@
-module master_apb(
+module #(parameter WIDTH = 8) master_apb(
 	input PCLK,PRESETn,transfer,READ_WRITE,PREADY,
-	input [8:0] apb_write_paddr, apb_read_paddr,
-	input [7:0] apb_write_data,prdata,
+	input [WIDTH:0] apb_write_paddr, apb_read_paddr,
+	input [WIDTH-1:0] apb_write_data,prdata,
 
 	output reg PWRITE,PSEL1,PENABLE,
-	output reg [7:0] apb_read_data_out,paddr,pwdata
+	output reg [WIDTH-1:0] apb_read_data_out,paddr,pwdata
 );
 
 	localparam IDLE = 0;
