@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/fetools/work_area/frontend/Batch_11/jonathanezekiels/APB_Protocol
+vmaster_apb
+!s110 1780307148
+!i10b 1
+!s100 ISEMXlPYUb_KOoF;3=gN<1
+If7E<CXXJhhkXKoYjh1iCA0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1780307147
+8apb_master.v
+Fapb_master.v
+L0 1
+Z2 OE;L;10.6c;65
+r1
+!s85 0
+31
+!s108 1780307148.000000
+!s107 apb_master.v|
+!s90 apb_master.v|
+!i113 0
+Z3 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z4 tCvgOpt 0
+vslave_apb
+!s110 1780310088
+!i10b 1
+!s100 Yi]Y``8VnVgbc>O@5@jQ=1
+Id=iTni_@GJn4F?j8DI@1d1
+R1
+R0
+w1780310085
+8apb_slave.v
+Fapb_slave.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1780310088.000000
+!s107 apb_slave.v|
+!s90 apb_slave.v|
+!i113 0
+R3
+R4
