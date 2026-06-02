@@ -1,4 +1,4 @@
-module #(parameter WIDTH=8) slave_apb(
+module slave_apb #(parameter WIDTH = 8) (
 	input PWRITE,PSEL1,PENABLE,PCLK,PRESETn,
 	input [WIDTH-1:0] paddr,pwdata,
 	output reg PREADY,

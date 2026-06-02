@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 d/fetools/work_area/frontend/Batch_11/jonathanezekiels/APB_Protocol
 vmaster_apb
-!s110 1780307148
+!s110 1780375485
 !i10b 1
-!s100 ISEMXlPYUb_KOoF;3=gN<1
-If7E<CXXJhhkXKoYjh1iCA0
+!s100 n0FPm@YV1cQ_fN:gnAA=j2
+IL_@a18OkWNVfAY`oi1PQW1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1780307147
+w1780375481
 8apb_master.v
 Fapb_master.v
 L0 1
@@ -23,20 +23,20 @@ Z2 OE;L;10.6c;65
 r1
 !s85 0
 31
-!s108 1780307148.000000
+!s108 1780375485.000000
 !s107 apb_master.v|
 !s90 apb_master.v|
 !i113 0
 Z3 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z4 tCvgOpt 0
 vslave_apb
-!s110 1780310088
+!s110 1780375518
 !i10b 1
-!s100 Yi]Y``8VnVgbc>O@5@jQ=1
-Id=iTni_@GJn4F?j8DI@1d1
+!s100 7[0RP^=dN]RT<Id5[T<Sd1
+IKBa8d=BZfeJ;bcCC]i8Gz3
 R1
 R0
-w1780310085
+w1780375514
 8apb_slave.v
 Fapb_slave.v
 L0 1
@@ -44,9 +44,30 @@ R2
 r1
 !s85 0
 31
-!s108 1780310088.000000
+!s108 1780375518.000000
 !s107 apb_slave.v|
 !s90 apb_slave.v|
+!i113 0
+R3
+R4
+vtop_apb
+!s110 1780375449
+!i10b 1
+!s100 k?Ab54iQlUjNOi6aIJJZ`3
+IGE7PAkjk6GM_nNzfODXQ@2
+R1
+R0
+w1780375446
+8apb_protocol.v
+Fapb_protocol.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1780375449.000000
+!s107 apb_protocol.v|
+!s90 apb_protocol.v|
 !i113 0
 R3
 R4

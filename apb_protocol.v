@@ -1,4 +1,4 @@
-module #(parameter WIDTH = 8) top_apb(
+module top_apb #(parameter WIDTH = 8) (
 	input PCLK,PRESETn,transfer,READ_WRITE,
 	input [WIDTH:0] apb_write_paddr,apb_read_paddr,
 	input [WIDTH-1:0] apb_write_data,
