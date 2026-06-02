@@ -1,7 +1,7 @@
 module slave_apb #(parameter WIDTH=8) (
 	input PWRITE,PSEL1,PENABLE,PCLK,PRESETn,
 	input [WIDTH-1:0] paddr,pwdata,
-	output reg PREADY,
+	output reg PREADY, PSLVERR,
 	output reg [WIDTH-1:0] prdata
 );
 
@@ -39,11 +39,20 @@ module slave_apb #(parameter WIDTH=8) (
 
 	// Instantly drive PREADY high when in the ACCESS state (Zero-wait-state)
 	always @(*) begin
-    		if (PSEL1 && PENABLE)
+    		if (PSEL1 && PENABLE) begin
         		PREADY = 1;
-    		else
+			if( PWRITE && paddr >= 8'hF0)
+				PSLVERR = 1;
+			else
+				PSLVERR = 0;
+		end
+    		else begin
         		PREADY = 0;
+			PSLVERR = 0;
+		end
 	end
+
+	
 	// Handle the actual writing and reading of the memory
 	always @(posedge PCLK) begin
 		if( curr_state == ACCESS) begin

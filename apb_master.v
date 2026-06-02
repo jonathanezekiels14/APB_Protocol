@@ -1,9 +1,9 @@
 module master_apb #(parameter WIDTH = 8) (
-	input PCLK,PRESETn,transfer,READ_WRITE,PREADY,
+	input PCLK,PRESETn,transfer,READ_WRITE,PREADY,PSLVERR,
 	input [WIDTH:0] apb_write_paddr, apb_read_paddr,
 	input [WIDTH-1:0] apb_write_data,prdata,
 
-	output reg PWRITE,PSEL1,PENABLE,
+	output reg PWRITE,PSEL1,PENABLE,apb_error,
 	output reg [WIDTH-1:0] apb_read_data_out,pwdata,
 	output reg [WIDTH:0] paddr // 9-bit address output
 );
@@ -66,9 +66,12 @@ module master_apb #(parameter WIDTH = 8) (
 	// Save the read data from the slave into an output register
 	always @(posedge PCLK or negedge PRESETn) begin
 		if (!PRESETn) begin
+			apb_error <= 0;
 			apb_read_data_out <= 0;
 		end
-		else
+		else begin
+			apb_error <= PSLVERR;
 			apb_read_data_out <= prdata;
+		end
 	end
 endmodule
