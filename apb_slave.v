@@ -56,8 +56,10 @@ module slave_apb #(parameter WIDTH=8) (
 	// Handle the actual writing and reading of the memory
 	always @(posedge PCLK) begin
 		if( curr_state == ACCESS) begin
-			if (PWRITE)
-				memory[paddr] <= pwdata; // Save data to memory
+			if (PWRITE) begin
+				if (paddr < 8'hF0)
+					memory[paddr] <= pwdata; // Save data to memory
+			end
 			else
 				prdata <= memory[paddr]; // Send data back to master
 		end
